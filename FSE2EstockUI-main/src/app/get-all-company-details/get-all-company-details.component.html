@@ -1,0 +1,45 @@
+
+     <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand">EStock <i class="fa fa-line-chart" aria-hidden="true"></i></a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="/add-company">Add Company <span class="sr-only">(current)</span></a> 
+            <a class="nav-item nav-link" href="/get-company">View Companies</a>
+            <a class="nav-item nav-link" href="/add-stock">Add Stock</a>
+            <a class="nav-item nav-link" href="/get-stock">View Stock</a>
+            <a class="nav-item nav-link" href="get-companies">View Company</a>
+            <a class="nav-item nav-link" href="/dashboard">LogOut</a>
+          </div>
+        </div>
+      </nav>
+
+
+<div id="card-container">
+    <div class="container">
+        <h2 class="text-center">ALL COMPANY DETAILS</h2>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+                <a href="">
+                    <div *ngFor="let company of companies">
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="text-container">
+                                    <h6>Company Code : {{ company.companyCode }}</h6>
+                                    <h4>Company Name : {{ company.companyName }}</h4>
+                                    <p>Company Ceo : {{ company.companyCeo }}</p>
+                                    <p>Company Turnover : {{ company.companyTurnover }}</p>
+                                    <p>Company Website : {{ company.companyWebsite }}</p>
+                                    <p>StockExchange : {{ company.stockExchangess }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
